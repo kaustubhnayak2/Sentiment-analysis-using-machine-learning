@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sentiment Analyzer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f7;
+      text-align: center;
+      margin-top: 50px;
+    }
+    textarea {
+      width: 60%;
+      height: 150px;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    input[type="submit"] {
+      padding: 10px 30px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    h3 {
+      margin-top: 30px;
+      color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h2>🔍 AI Sentiment Analyzer</h2>
+  <form action="/predict" method="post">
+    <textarea name="text" placeholder="Type a sentence here..."></textarea><br>
+    <input type="submit" value="Analyze">
+  </form>
+  <h3>{{ prediction_text }}</h3>
+</body>
+</html>
